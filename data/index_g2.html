@@ -1,0 +1,211 @@
+<!-- Groupe 2 -->
+<!doctype html>
+                        <html lang="en">
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Weather Data Sensor</title>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='style.css' rel='stylesheet'>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  body{
+height: 99.9vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(109, 108, 108);
+/* background-color: rgba(238, 237, 237, 0.33); */
+color: rgb(105, 104, 104);
+font-family: sans-serif;
+}
+.container{
+height: 80vh;
+background-color: #ffffff;
+/* border-color: #ffffff; */
+background-color: #555;
+align-items: center;
+border-radius: 1rem;
+vertical-align: middle;
+}
+span{
+width: 50%;
+}
+@media(max-width:767px)
+{
+.container{
+height: 100vh;
+}
+}
+.weather
+{
+width: 100%;
+}
+.h1tag{
+color: white;
+font-family:sans-serif;
+text-align: center;
+margin-bottom: 10%;
+height:10%;
+}
+@media(max-width:767px){
+.weather
+{
+width: 100%;
+}   
+}
+.card{
+padding: 1rem;
+color: white;
+/* background-color: #ffffff; */
+margin: 1.5rem 4vw;
+border-radius: 1rem;
+background-color: rgba(238, 237, 237, 0.22);
+/* border-color: rgba(238, 237, 237, 0.22); */
+box-shadow: 5px 6px 6px 2px #e9ecef;
+text-align: center;
+}
+@media(max-width:768px){
+.card{
+margin: 1.5rem;
+}
+}
+.title{
+justify-content: center;
+position: absolute;
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%)
+}
+.title p{
+margin-bottom: 0.2rem;
+font-size: 1.2rem;
+}
+.temp{
+font-size: 2.6rem;
+margin-bottom: 1rem;
+}
+.header{
+color: #dddddd;
+}
+.col-4{
+padding: 0 0.2rem;
+}
+.icon{
+align-self: flex-end;
+margin-right: -2.5rem;
+margin-top: -2rem;
+z-index: 999;
+}
+.icon img{
+width: 5rem;
+}
+                                </style>
+                                </head>
+                                <body className='snippet-body'>
+                                   
+                                <div class="container d-flex justify-content-center">
+            <div class="weather">
+                <h1 class="h1tag mt-2">WEATHER DATA SENSOR</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <span class="icon"><img width="100" height="100" src="https://img.icons8.com/stickers/100/temperature-low.png" alt="temperature-low"/>
+
+                            </span>
+                            <div class="title"><p>Temperature</p></div>
+                            <div id="temperature" class="temp">+20<sup>&deg;</sup></div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="header">General</div>
+                                        <div class="value">Sunny</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Air pollution</div>
+                                        <div class="value">47</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Fire</div>
+                                        <div class="value">No</div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <span class="icon"><img width="96" height="96" src="https://img.icons8.com/fluency/96/dew-point.png" alt="dew-point"/></span>
+                            <div class="title"><p>Humidity</p></div>
+                            <div id="humidity" class="temp">+18<sup>&deg;</sup></div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="header">General</div>
+                                        <div class="value">Sunny</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Air pollution</div>
+                                        <div class="value">20</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Fire</div>
+                                        <div class="value">No</div>
+                                    </div>
+                                </div>                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <span class="icon"><img src="https://img.icons8.com/color/50/000000/wind.png" alt="nothing"/></span>
+                            <div class="title"><p>Air Quality</p></div>
+                            <div id="air_quality" class="temp">+17<sup>&deg;</sup></div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="header">General</div>
+                                        <div class="value">Wind</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Air pollution</div>
+                                        <div class="value">52</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="header">Fire</div>
+                                        <div class="value">No</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+        
+                                myLink.addEventListener('click', function(e) {
+                                  e.preventDefault();
+                                });</script>
+                            
+                                </body>
+                                <script src='script.js'></script>
+ 

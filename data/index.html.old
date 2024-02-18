@@ -1,0 +1,52 @@
+<!DOCTYPE HTML><html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap_custom.css">
+  <link rel="stylesheet" href="style.css">    
+</head>
+<body class="m-5 p-5">
+    <div class="container card col-lg-6 col-md-8 col-sm-10 col-12">
+        <h2 class="mb-5">Weather Station</h2>
+        <img src="cloudy.png" alt="" width="200rem">
+        <div class="item-container">
+
+            <!-- ------------------Temperature------------------ -->
+            <i class="icon fas fa-thermometer-half"></i> 
+            <span class="item-labels">Température</span> 
+            <div class="items-values">
+                <span id="temperature">%TEMPERATURE%</span>
+                <div>
+                    <span>&deg;C</span>
+                    <!-- <sup class="units">&deg;C</sup> -->
+                </div>
+            </div>
+
+            <!-- ------------------Humidite------------------ -->
+            <i class="icon fas fa-tint"></i> 
+            <span class="item-labels">Humidité</span>
+            <div class="items-values">
+                <span id="humidity">%HUMIDITY%</span>
+                <!-- <span id="humidity">%HUMIDITY%</span> -->
+                <div>
+                    <span>&percnt;</span>
+                    <!-- <sup class="units">&deg;C</sup> -->
+                </div>
+            </div>  
+
+            <!-- ------------------Temperature------------------ -->
+            <i class="icon fas fa-wind"></i> 
+            <span class="item-labels">Qualité de l'air</span>
+            <div class="items-values">
+                <span id="air_quality">%AIR_QUALITY%</span>
+                <!-- <span id="air_quality">%AIR_QUALITY%</span> -->
+            </div>
+            </p>
+        </div>
+    </div>
+</body>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+<script src="script.js"></script>
+</html>
