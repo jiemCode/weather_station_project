@@ -21,8 +21,8 @@ boolean H_status = true;
 boolean A_status = true;
 
 // Replace with your network credentials
-const char* ssid = "CROUS DIAMNIADIO";
-const char* password = "CROUS@UAM";
+const char* ssid = "Reach";
+const char* password = "pass117#";
 
 #define DHTPIN 5     // Digital pin connected to the DHT sensor
 #define PIN_MQ135 35
@@ -215,7 +215,7 @@ void setup(){
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
   {
-    request->send(SPIFFS, "/index.html", "text/html");
+    request->send(SPIFFS, "/index.html", "text/html", false, processor);
   });
   server.serveStatic("/", SPIFFS, "/");
   server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -230,7 +230,7 @@ void setup(){
 
   // Start server
   server.begin();
-  Serial.println("Follow http://" + WiFi.localIP());
+  // Serial.println("Follow http://" + WiFi.localIP());
 
   Serial.begin(115200);
   Serial.println("");
@@ -252,11 +252,12 @@ void loop(){
     send_mail_alert("Alerte H", "Basse !");
     H_status=false;
   }
-  MQ135 air_quality = MQ135(PIN_MQ135);
-  air_quality_v = air_quality.getPPM(); 
+  MQ135 air_quality_f = MQ135(PIN_MQ135);
+  air_quality_v = air_quality_f.getPPM(); 
   if (A_status==true && !isnan(air_quality_v) && air_quality_v > aq_threshold){
     send_mail_alert("Alerte AQ", "Mauvaise qualite de l'air!");
     A_status=false;
   }
   delay(500000);
+  T_status = true;
 }
