@@ -21,8 +21,8 @@ boolean H_status = true;
 boolean A_status = true;
 
 // Replace with your network credentials
-const char* ssid = "Reach";
-const char* password = "pass117#";
+const char* ssid = "UAM_ETUDIANTS";
+const char* password = "passer123";
 
 #define DHTPIN 5     // Digital pin connected to the DHT sensor
 #define PIN_MQ135 35
@@ -215,7 +215,7 @@ void setup(){
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
   {
-    request->send(SPIFFS, "/index.html", "text/html", false, processor);
+    request->send(SPIFFS, "/index_g2.html", "text/html", false, processor);
   });
   server.serveStatic("/", SPIFFS, "/");
   server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
